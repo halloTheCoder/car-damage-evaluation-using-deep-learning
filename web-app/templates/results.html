@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h1 class="cover-heading">Damage Assessment Complete.</h1>
+  <p class="lead">
+    <img src="{{ url_for('send_file', filename=filename) }}" class="img-thumbnail" id="picture">
+  </p>
+  <p class="lead">
+    <h4>Results:</h4>
+    <table>
+      <tr>
+        <td>Car validation check</td>
+        {% if result['gate1_result'] %}
+        <td>
+            <i class="fa fa-check-square"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>Damage validation check</td>
+        {% if result['gate2_result'] %}
+        <td>
+            <i class="fa fa-check-square"></i>
+        </td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td>{{ result['location'] }}</td>
+      </tr>
+      <tr>
+        <td>Severity</td>
+        <td>{{ result['severity'] }}</td>
+      </tr>
+    </table>
+    {% else %}
+      <td>
+        <i class="fa fa-close"></i>
+         </td>
+              </tr>
+            </table>
+            <br>
+            <p>{{ result['gate2_message'][0] }}</p>
+            <p>{{ result['gate2_message'][1] }}</p>
+            {% endif %}
+            {% else %}
+                <td>
+                  <i class="fa fa-close"></i>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <p>{{ result['gate1_message'][0] }}</p>
+            <p>{{ result['gate1_message'][1] }}</p>
+          {% endif %}
+          <br>
+          <p>{{ result['final'] }}
+          </p>
+        </p>
+  <p class="lead">
+    <a href="{{ url_for('assess') }}" class="btn btn-lg btn-secondary">Request another damage assessment</a>
+  </p>             
+{% endblock %}
+     

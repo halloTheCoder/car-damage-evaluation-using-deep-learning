@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Car Assessment</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css' )}}">
+  </head>
+  <body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Car Assessment</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="{{ url_for('home') }}">Home</a>
+            <a class="nav-link" href="#contacts">Contact</a>
+          </nav>
+        </div>
+      </header>
+      <main role="main" class="inner cover">
+      {% block content %}{% endblock %}
+      </main>
+     
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled text-medium">
+            <li><a class="text-muted">Anik Dutta</a></li>   
+            <li><a class="text-muted">Akash Chandra</a></li>
+            <li><a class="text-muted">Sumit Kumar Singh</a></li>   
+          </ul>
+        </div>
+        <div class="col-6 col-md" id="contacts">
+            <ul class="list-unstyled text-small">
+            <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbQNPLCD241epbQ5xJ81zNMg6MH3OG1Ejn4RcKLLUVyraQpoyxjg" width="50%" height="50%"></li>
+            </ul>
+          <small class="d-block mb-3 text-muted">&copy; 2017-2018</smalsl>
+        </div>
+      </div>
+    </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+ <h1 class="cover-heading">Car Damage Detective.</h1>
+  <p class="lead">Upload a picture of your car damage.</p>
+  <p class="lead">
+    <div class="fileinput fileinput-new" data-provides="fileinput">
+    <div class="fileinput-preview thumbnail" data-trigger="fileinput" id="window"></div>
+    <div>
+      <form action="assessment" method="POST" enctype="multipart/form-data" class ="form-inline">
+        <span class="btn btn-default btn-file">
+          <span class="fileinput-new">Select Image</span>
+          <span class="fileinput-exists">Change</span>
+          <input type="file" id="filename" name="file">
+        </span>
+        <p class="lead">
+          <button type="submit" class="btn btn-lg btn-secondary fileinput-exists" id="analyze">Submit</button>
+        </p>
+      </form>
+    </div>
+  </p>
+        
+  <p class="lead">
+    <div class = flashes>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <p>{{ message }}</p>
+           {% endfor %}
+        {% endif %}
+      {% endwith %}
+    </div>
+  </p>
+{% endblock %}
+       

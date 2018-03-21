@@ -7,3 +7,5 @@ Created a web-app to take input as images from an user and to classify those ima
 Web app - [Car Damage Evaluation]() Updating later...
 
 Get the data and pretrained models and more from this [drive link](https://drive.google.com/drive/folders/1cCOxtyycmNX8hZjmmre1qHSQU76G6hLR?usp=sharing) 
+
+Get the updated model in json format from [here](https://github.com/halloTheCoder/web-app/tree/master/static/models)
